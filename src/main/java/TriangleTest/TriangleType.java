@@ -6,13 +6,21 @@ public class TriangleType {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter first number: ");
-        int a = input.nextInt();
+        String firstInput = input.next();
         System.out.print("Enter second number: ");
-        int b = input.nextInt();
+        String secondInput = input.next();
         System.out.print("Enter third number: ");
-        int c = input.nextInt();
-        String result = checkTriangleType(a, b, c);
-        System.out.println("Triangle " + result);
+        String thirdInput = input.next();
+
+        try {
+            int a = Integer.parseInt(firstInput);
+            int b = Integer.parseInt(secondInput);
+            int c = Integer.parseInt(thirdInput);
+            String result = checkTriangleType(a, b, c);
+            System.out.println("Triangle " + result);
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Please enter valid integers.");
+        }
     }
 
     public static String checkTriangleType(int a, int b, int c) {
