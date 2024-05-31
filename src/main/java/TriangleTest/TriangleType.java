@@ -11,7 +11,6 @@ public class TriangleType {
         int b = input.nextInt();
         System.out.print("Enter third number: ");
         int c = input.nextInt();
-
         String result = checkTriangleType(a, b, c);
         System.out.println("Triangle " + result);
     }
@@ -26,7 +25,7 @@ public class TriangleType {
                 return "This is a scalene triangle";
             }
         } else {
-            return "There is no triangle";
+            return "Your data is not valid!Enter integers greater than zero!";
         }
     }
 }
